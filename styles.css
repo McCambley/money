@@ -1,0 +1,108 @@
+/* Create styles for the most commonly used HTML elements */
+body {
+  font-family: 'Roboto Slab', serif;
+  /* set the background to dark */
+  background-color: #333;
+  /* set the text color to off-white */
+  color: #eee;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 1rem
+}
+
+* {
+  /* outline: 1px solid rgba(128, 128, 128, 0.251) */
+}
+
+p, li, a {
+  line-height: 1.5;
+  margin-top: 0;
+}
+
+a {
+  color: inherit;
+  font-weight: bold;
+}
+
+.calculator p {
+  /* margin: 0 */
+}
+
+.calculator-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .5rem 1rem;
+  text-align: center;
+}
+
+.calculator-percentages {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 600;
+  padding: 1rem
+}
+
+.calculator-percentages p {
+  margin: 0
+}
+
+.calculator-range {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input[type="number"]  {
+  width: 80%;
+  padding: .25rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  display: block;
+  margin: 0 auto;
+  /* Add more CSS rules as needed */
+}
+
+input[type="range"] {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 100%;
+  height: 1rem;
+  background-color: #ddd;
+  padding: 1rem 0;
+  border-radius: 5px;
+  box-sizing: border-box;
+  /* display: block; */
+  /* Add more CSS rules as needed */
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 480px;
+}
+
+
+
+/* style a table */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* style a table */
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+/* style a table */
+tr:nth-child(even) {
+  background-color: #dddddd58;
+}

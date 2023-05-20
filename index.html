@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budgeting</title>
+    <!-- import stylesheet -->
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- import script -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" />
+    <link rel="manifest" href="/public/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>💰 Budgeting</h1>
+    <!-- <section>
+      <h2>Overview</h2>
+      <p>
+        Hey Tysse! Welcome to a little guide on budgeting. The goal with this page is to reduce the stress of financial
+        planning by offering a few simple guidlines, definitions, and tools to help clear the air.
+      </p>
+    </section>
+    <section>
+      <h2>Some simple rules to follow</h2>
+      <p>
+        Hey Tysse! Welcome to a little guide on budgeting. The goal with this page is to reduce the stress of financial
+        planning by offering a few simple guidlines, definitions, and tools to help clear the air.
+      </p>
+      <ol>
+        <li>Pay yourself first</li>
+        <li>Pay your bills</li>
+        <li>Save for emergencies</li>
+        <li>Save for retirement</li>
+        <li>Have fun</li>
+      </ol>
+      <img src="/public/how-much-to-save.jpeg" alt="Saving guidlines" />
+    </section>
+    <section>
+      <h2>Some definitions</h2>
+      <p>This section contains a nice list of definitions for some of the terms you may come across when budgeting.</p>
+      <ul>
+        <li>Assets: Things you own that have value</li>
+        <li>Liabilities: Things you owe</li>
+        <li>Net Worth: Assets - Liabilities</li>
+        <li>Income: Money you earn</li>
+        <li>Expenses: Money you spend</li>
+        <li>Net Income: Income - Expenses</li>
+        <li>Fixed Expenses: Expenses that stay the same</li>
+        <li>Variable Expenses: Expenses that change</li>
+        <li>Discretionary Expenses: Expenses that are not necessary</li>
+        <li>Debt: Money you owe</li>
+        <li>Interest: Money you pay to borrow money</li>
+        <li>Principal: The amount of money you borrowed</li>
+        <li>Equity: The value of an asset minus the amount of debt you owe on the as</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Useful links</h2>
+      <p>This section has some useful links to tools I like to use when budgeting.</p>
+      <ul>
+        <li>
+          <a href="https://www.betterment.com/goals-quiz/life-state?from=get_started" target="_blank">Betterment</a>
+        </li>
+        <li><a href="https://mint.intuit.com/" target="_blank">Mint</a></li>
+      </ul>
+    </section> -->
+    <section class="calculator">
+      <h2>Calculator</h2>
+      <p>Use this calculator to see what 50%, 30%, and 20% of your monthly income is.</p>
+      <form>
+        <div class="calculator-inputs">
+          <label for="hourly-wage">What is your hourly wage?</label>
+          <div><label for="slider">How much are you saving?</label></div>
+          <input type="number" id="hourly-wage" name="hourly-wage" placeholder="$0" />
+          <div class="calculator-range">
+            <span>0%</span><input type="range" id="slider" min="0" max="20" step="1" value="20" /><span>20%</span>
+          </div>
+        </div>
+        <div class="calculator-percentages">
+          <p id="calculation-output1">Necessities: 50%</p>
+          <p id="calculation-output2">Discretionary: 30%</p>
+          <p id="slider-output">Saving: 20%</p>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Monthly</th>
+              <th>Annual</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Necessities</th>
+              <td id="necessities-month">$1000</td>
+              <td id="necessities-annual">$12000</td>
+            </tr>
+            <tr>
+              <th>Discretionary</th>
+              <td id="discretionary-month">$500</td>
+              <td id="discretionary-annual">$6000</td>
+            </tr>
+            <tr>
+              <th>Savings</th>
+              <td id="savings-month">$300</td>
+              <td id="savings-annual">$3600</td>
+            </tr>
+            <tr>
+              <th>Total</th>
+              <td id="total-month">$300</td>
+              <td id="total-annual">$3600</td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
