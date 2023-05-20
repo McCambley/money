@@ -82,15 +82,15 @@ function updateOutputs() {
   savingsPercent = parseInt(slider.value);
 
   // Display the slider value
-  sliderOutput.textContent = `Savings: ${savingsPercent}%`;
+  sliderOutput.textContent = `Savings: ${savingsPercent.toFixed()}%`;
 
   // Calculate and display the first calculation
   necessitiesPercent = (100 - savingsPercent) * (5 / 8);
-  calculationOutput1.textContent = `Necessities: ${necessitiesPercent}%`;
+  calculationOutput1.textContent = `Necessities: ${necessitiesPercent.toFixed()}%`;
 
   // Calculate and display the second calculation
   discretionaryPercent = (100 - savingsPercent) * (3 / 8);
-  calculationOutput2.textContent = `Discretionary: ${discretionaryPercent}%`;
+  calculationOutput2.textContent = `Discretionary: ${discretionaryPercent.toFixed()}%`;
   updateValues();
 }
 
