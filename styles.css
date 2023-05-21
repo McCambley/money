@@ -167,7 +167,7 @@ footer {
  display: none;
 }
 
-.outro {
+.callout {
   text-align: center;
   margin-top: 1rem;
   font-size: 1.2rem;
@@ -176,7 +176,7 @@ footer {
   padding: 1rem
 }
 
-.outro p {
+.callout p {
   margin: 0
 }
 
