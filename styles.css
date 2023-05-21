@@ -19,6 +19,12 @@ section {
   padding-bottom: 1rem;
 }
 
+#guidelines i {
+  opacity: .5;
+  /* font-size: 1rem; */
+}
+
+
 hr {
   margin: 0;
   border-radius: 5px;
@@ -38,6 +44,9 @@ p, li, a {
 a {
   color: inherit;
   font-weight: bold;
+}
+ol, ul {
+  margin: 0
 }
 
 .calculator p {
@@ -101,6 +110,7 @@ img {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   max-width: 480px;
+  margin-top: 1rem;
 }
 
 
@@ -129,6 +139,27 @@ footer {
   padding: 1rem;
   font-size: .75rem;
   color: #aaa;
+}
+
+.definitions-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 1rem; */
+}
+
+.definitions-heading h2 {
+  margin-bottom: 0;
+}
+
+.definitions-heading span {
+  font-size: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#definitions table {
+ display: none;
 }
 
 @media (max-width: 768px) {

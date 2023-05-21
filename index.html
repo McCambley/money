@@ -27,42 +27,34 @@
       <h2>Welcome!</h2>
       <p>The goal of this page is to act as a handy reference and approachable jumping off point for budgeting.</p>
       <p>
-        Below you will find a list of handy heuristics, common terms, useful links, a calculator get a quick picture on
-        how this all works.
+        There's a lot here so take your time, ask questions, and know that you don't have to do everything all at once.
+        Everything I've written below I've learned from years of life on earth, and I'm still working on following this
+        all myself.
       </p>
       <p>
-        If you're wondering, "What am I supposed to do with all this?", then skip to <a href="">the bottom</a> where
-        you'll find a list of things to do next.
+        If you're wondering, "What am I supposed to do with all this?", then skip to
+        <a href="#to-do">the bottom</a> where you'll find a list of things to do next.
       </p>
-      <h3>Contents</h3>
-      <ol>
-        <li><a href="#guidelines">Some simple rules to follow</a></li>
-        <li><a href="#definitions">Some definitions</a></li>
-        <li><a href="#links">Useful links</a></li>
-        <li><a href="#calculator">Calculator</a></li>
-      </ol>
+      <hr />
+      <section>
+        <h2>Contents</h2>
+        <ol>
+          <li><a href="#definitions">Glossary</a></li>
+          <li><a href="#guidelines">Guidelines</a></li>
+          <li><a href="#calculator">Calculator</a></li>
+          <li><a href="#links">Links</a></li>
+          <li><a href="#to-do">Now what?</a></li>
+        </ol>
+      </section>
     </section>
     <hr />
-    <section id="guidelines">
-      <h2>Some simple rules to follow</h2>
-      <p></p>
-      <ol>
-        <li>Pay yourself first</li>
-        <li>Pay your bills</li>
-        <li>Save for emergencies</li>
-        <li>Save for retirement</li>
-        <li>Have fun</li>
-      </ol>
-      <img
-        src="https://raw.githubusercontent.com/McCambley/money/main/public/how-much-to-save.jpeg"
-        alt="Saving guidelines"
-      />
-    </section>
-    <hr />
+
     <section id="definitions">
-      <h2>Some definitions</h2>
-      <p>This section contains a nice list of definitions for some of the terms you may come across when budgeting.</p>
-      <table>
+      <div class="definitions-heading">
+        <h2>Glossary</h2>
+        <span id="definitions-toggle">➕</span>
+      </div>
+      <table id="definitions-table">
         <thead>
           <tr>
             <th>Term</th>
@@ -70,6 +62,29 @@
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td>Cash</td>
+            <td>
+              Money you have on hand, usually in a checking account. When you're younger this might be sysnonymous with
+              "all your money", but as you start investing this will be a smaller and smaller percentage of your net
+              worth.
+            </td>
+          </tr>
+          <tr>
+            <td>ETF</td>
+            <td>
+              Exchange Traded Fund, or a pool of grouped investments. Instead of investing in Coke or Apple, you can
+              invest in an ETF, which will help diversify your portfolio, or reduce the risk that one stock tanking will
+              make you broke. Similar to an index fund.
+            </td>
+          </tr>
+          <tr>
+            <td>S&P 500</td>
+            <td>
+              Standard & Poor's 500 -- A historically sound index fund. Dad says invest in the S&P 500, then forget
+              about it until you retire. It's sound advice.
+            </td>
+          </tr>
           <tr>
             <td>Assets</td>
             <td>Things you own that have value</td>
@@ -214,28 +229,55 @@
       </table>
     </section>
     <hr />
-    <section id="links">
-      <h2>Useful links</h2>
-      <p>This section has some useful links to tools I like to use when budgeting.</p>
-      <ul>
+    <section id="guidelines">
+      <h2>Guidelines</h2>
+      <h3>Cash <i>Checking and Savings</i></h3>
+      <ol>
+        <li>Spend less than you make.</li>
+        <li>Keep enough cash on hand for immediate expenses.</li>
+        <li>Put whatever's left in high-yield savings accounts.</li>
+      </ol>
+      <h3>Investments <i>Stocks and Bonds</i></h3>
+      <ol>
+        <li>Invest aggressively early, more conservatively later.</li>
+        <li>Set it an forget it.</li>
+        <li>Don't chase cheap thrills, follow the s&p 500.</li>
+      </ol>
+      <h3>Retirement <i>Long Term Investments, IRAs, and 401ks</i></h3>
+      <ol>
+        <li>Put 20% of each paycheck aside for retirement.</li>
         <li>
-          <a href="https://www.monarchmoney.com/" target="_blank">Monarch</a> -- A website to track all your accounts at
-          once
+          Max out yearly Roth IRA contributions ($6,000). You'll pay taxes when you deposit money (now) but none when
+          you retire and pull that money out. You'll most likely be paying more in taxes later, so getting taxed on
+          deposits now is ideal.
         </li>
+        <li>Max out 401k contributions, especially if your company matches.</li>
+      </ol>
+      <h3>General <i>Keeping it simple</i></h3>
+      <ol>
         <li>
-          <a href="https://www.betterment.com/goals-quiz/life-state?from=get_started" target="_blank">Betterment</a> --
-          A simple way to get start with and automate investing
+          50/30/20 — 20% of your income should go towards savings and retirement. More is fine; less may mean saving
+          longer. 50% (maximum) should go toward necessities. 30% goes toward discretionary items.
         </li>
+        <li>Take your time with this. A solid "set up" session and semiannual check ups are plenty.</li>
         <li>
-          <a href="https://mint.intuit.com/" target="_blank">Mint</a> -- Another website to track all your accounts at
-          once
+          Percentages change as you age. Check out the image below to see a solid guideline on how much to save when.
         </li>
-      </ul>
+      </ol>
+      <img
+        src="https://raw.githubusercontent.com/McCambley/money/main/public/how-much-to-save.jpeg"
+        alt="Saving guidelines"
+      />
     </section>
     <hr />
+
     <section class="calculator" id="calculator">
       <h2>Calculator</h2>
-      <!-- <p>Use this calculator to see what 50%, 30%, and 20% of your monthly income is.</p> -->
+      <p>Use this calculator to see what 50%, 30%, and 20% of your monthly income is.</p>
+      <p>
+        Realistically, it will be hard to save 20% early on when you're income is low. Use the slider to get a feel for
+        how much you might be able to save.
+      </p>
       <form>
         <div class="calculator-inputs">
           <label id="wage-label" for="hourly-wage">What is your hourly wage?</label>
@@ -282,6 +324,39 @@
           </tbody>
         </table>
       </form>
+    </section>
+    <hr />
+    <section id="links">
+      <h2>Links</h2>
+      <p>This section has some useful links to tools I like to use when budgeting.</p>
+      <ul>
+        <li>
+          <a href="https://www.monarchmoney.com/" target="_blank">Monarch</a> -- A website to track all your accounts at
+          once
+        </li>
+        <li>
+          <a href="https://www.betterment.com/goals-quiz/life-state?from=get_started" target="_blank">Betterment</a> --
+          A simple way to get start with and automate investing
+        </li>
+        <li>
+          <a href="https://mint.intuit.com/" target="_blank">Mint</a> -- Another website to track all your accounts at
+          once
+        </li>
+      </ul>
+    </section>
+    <hr />
+    <section id="to-do">
+      <h2>Now what?</h2>
+      <ol>
+        <li>
+          Read through the glossary to get a rough understanding of terms you might come across on your financial
+          journey.
+        </li>
+        <li>Read through the guidelines to get a rough understanding of how to manage your money.</li>
+        <li>Use the calculator to get insight into what it looks like to start saving.</li>
+        <li>Set up an account on Mint or Monarch to get better insights into your spending and savings.</li>
+        <li>Set up an account on Betterment to start investing.</li>
+      </ol>
     </section>
     <footer><p>Jake McCambley 2023</p></footer>
     <script src="script.js"></script>

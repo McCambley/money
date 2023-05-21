@@ -94,4 +94,15 @@ function updateOutputs() {
   updateValues();
 }
 
+const definitionToggle = document.getElementById("definitions-toggle");
+
+definitionToggle.addEventListener("click", () => {
+  const definitions = document.getElementById("definitions-table");
+  const definitionsHeading = document.querySelector(".definitions-heading");
+  definitions.style.display = definitions.style.display === "block" ? "none" : "block";
+  definitionToggle.textContent = definitions.style.display === "none" ? "➕" : "➖";
+  definitionsHeading.style.marginBottom = definitions.style.display === "none" ? "0rem" : "1rem";
+  //   button.classList.toggle("section-expanded");
+});
+
 updateValues();
