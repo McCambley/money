@@ -7,11 +7,27 @@ body {
   color: #eee;
   max-width: 768px;
   margin: 0 auto;
-  padding: 0 1rem
+  padding: 0 1rem 4rem
 }
 
 * {
   /* outline: 1px solid rgba(128, 128, 128, 0.251) */
+}
+
+section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+hr {
+  margin: 0;
+  border-radius: 5px;
+  border-color: #eeeeee1e;
+}
+
+h2 {
+  margin-top: 0rem;
+  margin-bottom: 1rem;
 }
 
 p, li, a {
@@ -106,4 +122,30 @@ td, th {
 /* style a table */
 tr:nth-child(even) {
   background-color: #dddddd58;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: .75rem;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .calculator-inputs #wage-label {
+    grid-area: a;
+  }
+  .calculator-inputs #hourly-wage {
+    grid-area: b;
+  }
+  .calculator-inputs #range-label {
+    grid-area: c;
+  }
+  .calculator-inputs #range {
+    grid-area: d;
+  }
+  .calculator-inputs {
+    grid-template-areas: "a" "b" "c" "d";
+    grid-template-columns: 1fr;
+  }
 }
