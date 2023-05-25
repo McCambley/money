@@ -128,18 +128,36 @@ table {
 }
 
 /* style a table */
-td, th {
+.definitions th {
+  border: 1px solid #eeeeee1e;
+  text-align: left;
+  padding: 8px;
+}
+.definitions td {
   border: 1px solid #eeeeee1e;
   text-align: left;
   padding: 8px;
 }
 
-td {
+.definitions tr:nth-child(even) {
+  background-color: #dddddd1a;
+}
+
+
+
+/* style a table */
+.calculator td, th {
+  border: 1px solid #eeeeee1e;
+  text-align: left;
+  padding: 8px;
+}
+
+.calculator td {
   text-align: right;
 }
 
 /* style a table */
-tr:nth-child(4) {
+.calculator tr:nth-child(4) {
   background-color: #dddddd1a;
 }
 
