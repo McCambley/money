@@ -24,21 +24,47 @@
     <section>
       <h2>Welcome!</h2>
       <p>
-        The goal of this page is to act as a handy reference and approachable jumping off point for financial literacy.
+        Personal finance can be stressful. There are countless places to find information and they all say different
+        things. This page is a practical collection of useful insights I've gathered through extensive research and
+        personal experience. It hopefully serves as a comprehensive starting point to help you grasp the fundamentals of
+        personal finance and navigate your finances effectively.
       </p>
-    </section>
-    <hr />
-    <section>
-      <h2>How to use this guide</h2>
-      <p>
+      <!-- <h3>By the end of this guide you will...</h3>
+      <ul>
+        <li>Understand fundamental concepts frequently referenced in personal finance</li>
+        <li>Have a general framework guiding what to do with your money</li>
+        <li>Be able to calculate how much you can start saving no matter how much you're currently making</li>
+        <li>Have a road map of what to do next to get started taking control of your personal finances</li>
+      </ul>
+     -->
+      <h3>This guide will help you:</h3>
+      <ul>
+        <li>Grasp fundamental concepts in personal finance</li>
+        <li>Gain a framework for managing your finances</li>
+        <li>Calculate achievable savings regardless of your income</li>
+      </ul>
+      <!-- <p>
         There's a lot here so take your time, ask questions, and know that you don't have to do everything all at once.
         Everything I've written below I've learned from years of life on earth, and I'm still working on following this
         all myself.
-      </p>
-      <p>
-        If you're wondering, "What am I supposed to do with all this?", then skip to
-        <a href="#to-do">the bottom</a> where you'll find a list of things to do next.
-      </p>
+      </p> -->
+
+      <div class="callout">
+        <p>
+          If you're wondering, "What am I supposed to do with all this?", then skip to
+          <a href="#to-do">the bottom</a> where you'll find a list of things to do next.
+        </p>
+
+        <p>🏃‍♀️</p>
+      </div>
+      <!-- <div class="callout">
+        <p>
+          There's a lot here so take your time, ask questions, and know that you don't have to do everything all at
+          once. Everything I've written below I've learned from years of life on earth, and I'm still working on
+          following this all myself.
+        </p>
+        <p>🕊️</p>
+      </div> -->
       <!-- <div class="callout">
         <p>
           This is one of many ways to approach personal finance. This works for me, and something else might work for
@@ -47,6 +73,11 @@
         <p>🕊️</p>
       </div> -->
     </section>
+    <!-- <hr />
+    <section>
+      <h2>How to use this guide</h2>
+      <p>By the end</p>
+    </section> -->
     <hr />
     <section>
       <h2>Contents</h2>
@@ -238,6 +269,11 @@
     <hr />
     <section id="guidelines">
       <h2>Guidelines</h2>
+      <div class="info">
+        Check out the <a href="#definitions">glossary</a> above if you haven't already, it will help this make more
+        sense.
+      </div>
+
       <h3>Cash <i>Checking and Savings</i></h3>
       <ol>
         <li>Spend less than you make.</li>
@@ -290,16 +326,14 @@
     <section class="calculator" id="calculator">
       <h2>Calculator</h2>
       <p>
-        Use this calculator to see what 50%, 30%, and 20% of your monthly income is to get a rough idea of how to
-        budget.
+        What do the above guidelines actually look like in practice? Use this calculator to see what 50%, 30%, and 20%
+        of your monthly income is to get a rough idea of how to budget.
       </p>
       <p>
         Realistically, it will be hard to save 20% early on when you're income is low. Use the slider to get a feel for
         how much you might be able to save.
       </p>
-      <p>
-        <i><b>Note:</b> This char shows after-tax values. It will subtract taxes based on your income level.</i>
-      </p>
+      <p></p>
       <form>
         <div class="calculator-inputs">
           <label id="wage-label" for="hourly-wage">What is your hourly wage?</label>
@@ -346,6 +380,7 @@
           </tbody>
         </table>
       </form>
+      <div class="info">This chart shows after-tax values. It will subtract taxes based on your income level.</div>
     </section>
 
     <hr />
@@ -392,6 +427,21 @@
           A simple way to get start with and automate investing.
         </li>
       </ul>
+    </section>
+    <hr />
+    <section>
+      <h2>Questions?</h2>
+      <p>Chat with a chatbot below</p>
+      <div class="chat-container">
+        <div class="chat-history" id="chat-history">
+          <!-- Chat history will be displayed here -->
+        </div>
+        <form id="chat-form">
+          <input type="text" id="user-input" placeholder="Type your message..." />
+          <button type="submit">Send</button>
+        </form>
+        <p id="chat-output"></p>
+      </div>
     </section>
     <footer><p>Jake McCambley 2023</p></footer>
     <script src="script.js"></script>

@@ -106,3 +106,56 @@ definitionToggle.addEventListener("click", () => {
 });
 
 updateValues();
+
+// ---
+// Chat integration
+// ---
+
+const apiUrl = "https://api.openai.com/v1/chat/completions";
+
+async function sendMessage(message) {
+  const response = await fetch(apiUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer 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`,
+    },
+    body: JSON.stringify({
+      model: "gpt-3.5-turbo",
+      messages: [
+        { role: "system", content: "user" },
+        { role: "user", content: message },
+      ],
+    }),
+  });
+
+  const data = await response.json();
+  const generatedMessage = data.choices[0].message.content;
+
+  // Display the generated message in the chat interface
+  displayMessage(generatedMessage);
+}
+
+// Capture user input and handle it
+const userInput = document.getElementById("user-input");
+const chatForm = document.getElementById("chat-form");
+const chatOutput = document.getElementById("chat-output");
+
+chatForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  chatOutput.textContent = "Loading...";
+  const message = userInput.value;
+  try {
+    sendMessage(message);
+  } catch (error) {
+    console.log(error);
+    chatOutput.textContent = "Something went wrong...";
+  }
+  userInput.value = "";
+});
+
+function displayMessage(message) {
+  // Display the message in the chat interface
+  // You can manipulate the DOM to add the message to the chat history
+  chatOutput.textContent = message;
+}

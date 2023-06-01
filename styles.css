@@ -188,17 +188,25 @@ footer {
 #definitions table {
  display: none;
 }
-
 .callout {
+  font-size: 1.2rem;
+  border: 1px solid rgb(196, 212, 237);
+  background: rgb(196, 212, 237, .1);
+}
+.info {
+  font-size: 1rem;
+  border: 1px solid rgb(254, 235, 119);
+  background: rgba(254, 235, 119, .1);
+}
+
+.callout, .info {
   text-align: center;
   margin-top: 1rem;
-  font-size: 1.2rem;
-  border: 1px solid #ddd;
   border-radius: 5px;
   padding: 1rem
 }
 
-.callout p {
+.callout p, .info p {
   margin: 0
 }
 
