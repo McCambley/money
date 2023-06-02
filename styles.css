@@ -251,6 +251,7 @@ footer {
   gap: .5rem;
   max-width: 1024px;
   margin: 0 auto;
+  max-width: 100%;
 }
 
 #chat-form #user-input {
@@ -308,6 +309,11 @@ footer {
  
 }
 @media (max-width: 480px) {
+  #chat-form {
+    grid-template-columns: 1fr;
+    gap: 0;
+   
+  }
   .chat-message {
     max-width: 100%;
   }
