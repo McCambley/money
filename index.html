@@ -327,18 +327,15 @@
       <h2>Calculator</h2>
       <p>
         What do the above guidelines actually look like in practice? Use this calculator to see what 50%, 30%, and 20%
-        of your monthly income is to get a rough idea of how to budget.
-      </p>
-      <p>
-        Realistically, it will be hard to save 20% early on when you're income is low. Use the slider to get a feel for
-        how much you might be able to save.
+        of your monthly income is to get a rough idea of how to budget. Realistically, it will be hard to save 20% early
+        on when you're income is low. Use the slider to get a feel for how much you might be able to save.
       </p>
       <p></p>
-      <form>
+      <form id="calculator-form">
         <div class="calculator-inputs">
           <label id="wage-label" for="hourly-wage">What is your hourly wage?</label>
           <div id="range-label"><label for="slider">How much are you saving?</label></div>
-          <input type="number" id="hourly-wage" name="hourly-wage" placeholder="$0" />
+          <input type="number" step="0.01" id="hourly-wage" name="hourly-wage" placeholder="$0" />
           <div class="calculator-range" id="range">
             <span>0%</span><input type="range" id="slider" min="0" max="20" step="1" value="20" /><span>20%</span>
           </div>
@@ -430,7 +427,7 @@
     </section>
     <hr />
     <section>
-      <h2>Questions?</h2>
+      <h2>Chat</h2>
       <div class="chat-container">
         <div class="chat-history" id="chat-history">
           <p class="chat-message bot">

@@ -108,6 +108,12 @@ definitionToggle.addEventListener("click", () => {
 
 updateValues();
 
+// Prevent the calculator form from submitting
+const calculatorForm = document.getElementById("calculator-form");
+calculatorForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+
 // ---
 // Chat integration
 // ---
