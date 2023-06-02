@@ -152,10 +152,7 @@ chatForm.addEventListener("submit", (event) => {
 
   const message = userInput.value;
   try {
-    // sendMessage(message);
-    setTimeout(() => {
-      displayMessage("Get money fuck bitches");
-    }, 1000);
+    sendMessage(message);
   } catch (error) {
     console.log(error);
     chatOutput.textContent = "Something went wrong...";
@@ -167,7 +164,7 @@ function displayMessage(message) {
   // Create the response element
   const botMessage = document.createElement("p");
   botMessage.classList.add("chat-message", "bot");
-  botMessage.textContent = "Fancy response";
+  botMessage.textContent = message;
 
   // Remove the placeholder element
   const botResponses = chatHistory?.querySelectorAll("p.bot");
