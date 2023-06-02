@@ -10,10 +10,6 @@ body {
   padding: 0 1rem
 }
 
-* {
-  /* outline: 1px solid rgba(128, 128, 128, 0.251) */
-}
-
 section {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -208,6 +204,69 @@ footer {
 
 .callout p, .info p {
   margin: 0
+}
+
+.chat-history {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.chat-message {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  border: 1px solid rgb(117, 117, 117);
+  background-color: rgba(117, 117, 117, .1);
+  padding: .5rem 1rem;
+  border-radius: 10px;
+  max-width: 65%;
+  align-self: flex-start;
+}
+
+.chat-message.user {
+  justify-content: flex-end;
+  align-self: flex-end;
+  background-color: rgba(117, 117, 117, .7);
+}
+
+#chat-form {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: .5rem;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+#chat-form #user-input {
+  padding: .5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  background-color: transparent;
+  color: #FFF; 
+}
+
+#chat-form #user-input:focus {
+  outline: none; 
+}
+
+#chat-form #user-input::placeholder {
+  color: #ddd; 
+}
+
+#chat-form button {
+  padding: .5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  width: 100%;
+  color: #333;
 }
 
 @media (max-width: 768px) {

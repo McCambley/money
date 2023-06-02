@@ -431,14 +431,16 @@
     <hr />
     <section>
       <h2>Questions?</h2>
-      <p>Chat with a chatbot below</p>
       <div class="chat-container">
-        <div class="chat-history" id="chat-history"></div>
+        <div class="chat-history" id="chat-history">
+          <p class="chat-message bot">
+            Hey there! I'm a chatbot and an expert in all things personal finance. What can I help you with?
+          </p>
+        </div>
         <form id="chat-form">
-          <input type="text" id="user-input" placeholder="Type your message..." />
+          <input type="text" id="user-input" placeholder="Type your question..." />
           <button type="submit">Send</button>
         </form>
-        <p id="chat-output"></p>
       </div>
     </section>
 

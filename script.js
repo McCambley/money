@@ -1,3 +1,4 @@
+// @ts-check
 // Get references to the input elements
 const hourlyWageInput = document.getElementById("hourly-wage");
 
@@ -110,6 +111,9 @@ updateValues();
 // ---
 // Chat integration
 // ---
+const userInput = document.getElementById("user-input");
+const chatForm = document.getElementById("chat-form");
+const chatHistory = document.getElementById("chat-history");
 
 const apiUrl = "https://chat-5notrvadta-uc.a.run.app";
 
@@ -132,17 +136,26 @@ async function sendMessage(message) {
   displayMessage(generatedMessage);
 }
 
-// Capture user input and handle it
-const userInput = document.getElementById("user-input");
-const chatForm = document.getElementById("chat-form");
-const chatOutput = document.getElementById("chat-output");
-
 chatForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  chatOutput.textContent = "Loading...";
+  // Display the user's message in the chat interface
+  const userMessage = document.createElement("p");
+  userMessage.classList.add("chat-message", "user");
+  userMessage.textContent = userInput.value;
+  chatHistory.appendChild(userMessage);
+
+  // Display a placeholder for the bot's message in the chat interface
+  const botMessagePlaceholder = document.createElement("p");
+  botMessagePlaceholder.classList.add("chat-message", "bot");
+  botMessagePlaceholder.textContent = "...";
+  chatHistory.appendChild(botMessagePlaceholder);
+
   const message = userInput.value;
   try {
-    sendMessage(message);
+    // sendMessage(message);
+    setTimeout(() => {
+      displayMessage("Get money fuck bitches");
+    }, 1000);
   } catch (error) {
     console.log(error);
     chatOutput.textContent = "Something went wrong...";
@@ -151,7 +164,16 @@ chatForm.addEventListener("submit", (event) => {
 });
 
 function displayMessage(message) {
+  // Create the response element
+  const botMessage = document.createElement("p");
+  botMessage.classList.add("chat-message", "bot");
+  botMessage.textContent = "Fancy response";
+
+  // Remove the placeholder element
+  const botResponses = chatHistory?.querySelectorAll("p.bot");
+  const placeholderResponse = botResponses[botResponses?.length - 1];
+  placeholderResponse.remove();
+
   // Display the message in the chat interface
-  // You can manipulate the DOM to add the message to the chat history
-  chatOutput.textContent = message;
+  chatHistory.appendChild(botMessage);
 }
