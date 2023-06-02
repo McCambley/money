@@ -146,7 +146,7 @@ chatForm.addEventListener("submit", (event) => {
 
   // Display a placeholder for the bot's message in the chat interface
   const botMessagePlaceholder = document.createElement("p");
-  botMessagePlaceholder.classList.add("chat-message", "bot");
+  botMessagePlaceholder.classList.add("chat-message", "bot", "pulse");
   botMessagePlaceholder.textContent = "...";
   chatHistory.appendChild(botMessagePlaceholder);
 

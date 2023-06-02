@@ -1,4 +1,19 @@
 /* Create styles for the most commonly used HTML elements */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(.99);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 body {
   font-family: 'Roboto Slab', serif;
   /* set the background to dark */
@@ -269,6 +284,10 @@ footer {
   color: #333;
 }
 
+.pulse {
+  animation: pulse 3s  infinite;
+}
+
 @media (max-width: 768px) {
   .calculator-inputs #wage-label {
     grid-area: a;
@@ -285,5 +304,11 @@ footer {
   .calculator-inputs {
     grid-template-areas: "a" "b" "c" "d";
     grid-template-columns: 1fr;
+  }
+ 
+}
+@media (max-width: 480px) {
+  .chat-message {
+    max-width: 100%;
   }
 }
