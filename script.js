@@ -124,6 +124,8 @@ const chatHistory = document.getElementById("chat-history");
 const apiUrl = "https://chat-5notrvadta-uc.a.run.app";
 
 async function sendMessage(message) {
+  const prompt =
+    "You are a financial expert. Target audience for this response is a highschooler. You are not allowed to answer questions that do not pertain to personal finance in some manner. If you are asked a question that does not pertain to personal finance, politely explain that you are only designed to answer questions about personal finance. Answer the following question in a comprehensive and approachable manner: ";
   const response = await fetch(apiUrl, {
     method: "POST",
     headers: {
@@ -131,6 +133,7 @@ async function sendMessage(message) {
       // Authorization: `Bearer TOKEN`,
     },
     body: JSON.stringify({
+      prompt,
       message,
     }),
   });
