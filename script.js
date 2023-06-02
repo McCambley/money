@@ -111,26 +111,22 @@ updateValues();
 // Chat integration
 // ---
 
-const apiUrl = "https://api.openai.com/v1/chat/completions";
+const apiUrl = "https://chat-5notrvadta-uc.a.run.app";
 
 async function sendMessage(message) {
   const response = await fetch(apiUrl, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer TOKEN`,
+      // Authorization: `Bearer TOKEN`,
     },
     body: JSON.stringify({
-      model: "gpt-3.5-turbo",
-      messages: [
-        { role: "system", content: "user" },
-        { role: "user", content: message },
-      ],
+      message,
     }),
   });
 
   const data = await response.json();
-  const generatedMessage = data.choices[0].message.content;
+  const generatedMessage = data.response;
 
   // Display the generated message in the chat interface
   displayMessage(generatedMessage);
