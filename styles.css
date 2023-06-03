@@ -309,6 +309,28 @@ footer {
   animation: pulse 2s  infinite;
 }
 
+quote {
+  display: block;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+  text-align: left;
+  margin-bottom: 1rem;
+  border-left: 2px solid #ddd;
+  padding: 1rem
+}
+
+quote:nth-of-type(even){
+  border-left: none;
+  border-right: 2px solid #ddd;
+  text-align: right;
+}
+.quote-source:nth-of-type(even){
+  
+  text-align: right;
+}
+
 @media (max-width: 768px) {
   .calculator-inputs #wage-label {
     grid-area: a;
