@@ -14,6 +14,10 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto Slab', serif;
   /* set the background to dark */
@@ -120,7 +124,7 @@ input[type="range"] {
   justify-content: center;
 }
 
-img {
+.image-container img {
   width: 100%;
   height: auto;
   border-radius: 5px;
@@ -221,6 +225,17 @@ footer {
   margin: 0
 }
 
+.chat-container {
+  border: 1px solid rgb(117, 117, 117);
+  border-radius: 16px;
+  padding: 1rem;
+  background: rgba(117, 117, 117, .1);
+}
+
+.chat-container hr {
+  margin-bottom: 1rem;
+}
+
 .chat-history {
   display: flex;
   flex-direction: column;
@@ -252,6 +267,7 @@ footer {
   max-width: 1024px;
   margin: 0 auto;
   max-width: 100%;
+  position: relative;
 }
 
 #chat-form #user-input {
@@ -261,6 +277,7 @@ footer {
   font-size: 1rem;
   background-color: transparent;
   color: #FFF; 
+  width: 100%
 }
 
 #chat-form #user-input:focus {
@@ -281,6 +298,11 @@ footer {
   transition: all .3s ease-in-out;
   width: 100%;
   color: #333;
+  /* width: auto; */
+}
+
+#chat-form button img {
+  display: none;
 }
 
 .pulse {
@@ -304,24 +326,42 @@ footer {
     grid-template-areas: "a" "b" "c" "d";
     grid-template-columns: 1fr;
   }
+  #chat-form {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+  }
+  #chat-form #user-input {
+    border: none;
+  }
+  #chat-form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0
+  }
+  #chat-form button span {
+    display: none;
+  }
+
+  #chat-form button img {
+    display:block;
+    /* transform: scale(1.) */
+  }
  
 }
 @media (max-width: 480px) {
+  .chat-container {
+    /* uncomment these to remove border of chat on mobile screens */
+    /* border: none; */
+    /* padding: 0rem; */
+    /* background: transparent; */
+}
   #chat-form {
-    grid-template-columns: 1fr;
+    grid-template-columns: 4fr 1fr;
     gap: 0rem;
   }
   .chat-message {
-    max-width: 100%;
+    max-width: 95%;
   }
-  #chat-form button {
-    border-radius: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-  #chat-form #user-input {
-    border-radius: 10px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
+
 }
