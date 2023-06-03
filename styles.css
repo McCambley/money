@@ -352,9 +352,9 @@ footer {
 @media (max-width: 480px) {
   .chat-container {
     /* uncomment these to remove border of chat on mobile screens */
-    /* border: none; */
-    /* padding: 0rem; */
-    /* background: transparent; */
+    border: none;
+    padding: 0rem;
+    background: transparent;
 }
   #chat-form {
     grid-template-columns: 4fr 1fr;
