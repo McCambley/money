@@ -173,13 +173,15 @@ chatForm.addEventListener("submit", async (event) => {
   chatHistory.appendChild(botMessagePlaceholder);
 
   const message = userInput.value;
+  userInput.placeholder = "Loading...";
+  userInput.value = "";
   try {
     await sendMessage(message);
   } catch (error) {
     console.log(error);
     chatOutput.textContent = "Something went wrong...";
   }
-  userInput.value = "";
+  userInput.placeholder = "Ask another question...";
   enableForm();
 });
 
