@@ -101,7 +101,7 @@ definitionToggle.addEventListener("click", () => {
   const definitions = document.getElementById("definitions-table");
   const definitionsHeading = document.querySelector(".definitions-heading");
   definitions.style.display = definitions.style.display === "block" ? "none" : "block";
-  definitionToggle.textContent = definitions.style.display === "none" ? "➕" : "➖";
+  definitionToggle.src = definitions.style.display === "none" ? "./public/down.svg" : "./public/up.svg";
   definitionsHeading.style.marginBottom = definitions.style.display === "none" ? "0rem" : "1rem";
   //   button.classList.toggle("section-expanded");
 });

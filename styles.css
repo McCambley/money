@@ -194,10 +194,9 @@ footer {
   margin-bottom: 0;
 }
 
-.definitions-heading span {
-  font-size: 2rem;
+#definitions-toggle {
+  width: 2rem;
   cursor: pointer;
-  font-weight: bold;
 }
 
 #definitions table {
@@ -377,7 +376,11 @@ quote:nth-of-type(even){
     border: none;
     padding: 0rem;
     background: transparent;
-}
+  }
+
+  .chat-container hr {
+    display: none;
+  }
   #chat-form {
     grid-template-columns: 4fr 1fr;
     gap: 0rem;
