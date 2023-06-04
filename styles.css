@@ -22,6 +22,7 @@ body {
   font-family: 'Roboto Slab', serif;
   /* set the background to dark */
   background-color: #333;
+  background-color: #333;
   /* set the text color to off-white */
   color: #eee;
   max-width: 768px;
@@ -388,5 +389,21 @@ quote:nth-of-type(even){
   .chat-message {
     max-width: 95%;
   }
+
+}
+
+hr {
+  display: none;
+}
+
+section {
+  padding: 1rem;
+  background-color: #333;
+  border-radius: 8px;
+  margin-bottom: 1rem
+}
+
+body {
+  background-color: #1d1d1d;
 
 }
