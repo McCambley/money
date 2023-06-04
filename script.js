@@ -118,12 +118,24 @@ calculatorForm.addEventListener("submit", (event) => {
 // Chat integration
 // ---
 const userInput = document.getElementById("user-input");
+const formButton = document.getElementById("form-button");
 const chatForm = document.getElementById("chat-form");
 const chatHistory = document.getElementById("chat-history");
 
 const apiUrl = "https://chat-5notrvadta-uc.a.run.app";
 
+const disableForm = () => {
+  userInput.disabled = true;
+  formButton.disabled = true;
+};
+
+const enableForm = () => {
+  userInput.disabled = false;
+  formButton.disabled = false;
+};
+
 async function sendMessage(message) {
+  // Disable the form while the message is being sent
   const prompt =
     "You are a financial expert. Target audience for this response is a highschooler. You are not allowed to answer questions that do not pertain to personal finance in some manner. If you are asked a question that does not pertain to personal finance, politely explain that you are only designed to answer questions about personal finance. Answer the following question in a comprehensive and approachable manner: ";
   const response = await fetch(apiUrl, {
@@ -145,8 +157,9 @@ async function sendMessage(message) {
   displayMessage(generatedMessage);
 }
 
-chatForm.addEventListener("submit", (event) => {
+chatForm.addEventListener("submit", async (event) => {
   event.preventDefault();
+  disableForm();
   // Display the user's message in the chat interface
   const userMessage = document.createElement("p");
   userMessage.classList.add("chat-message", "user");
@@ -161,12 +174,13 @@ chatForm.addEventListener("submit", (event) => {
 
   const message = userInput.value;
   try {
-    sendMessage(message);
+    await sendMessage(message);
   } catch (error) {
     console.log(error);
     chatOutput.textContent = "Something went wrong...";
   }
   userInput.value = "";
+  enableForm();
 });
 
 function displayMessage(message) {
