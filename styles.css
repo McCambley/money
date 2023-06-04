@@ -307,6 +307,7 @@ footer {
 
 .pulse {
   animation: pulse 2s  infinite;
+  margin-bottom: 0;
 }
 
 quote {

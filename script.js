@@ -125,11 +125,13 @@ const chatHistory = document.getElementById("chat-history");
 const apiUrl = "https://chat-5notrvadta-uc.a.run.app";
 
 const disableForm = () => {
+  chatForm.style.setProperty("display", "none");
   userInput.disabled = true;
   formButton.disabled = true;
 };
 
 const enableForm = () => {
+  chatForm.style.setProperty("display", "grid");
   userInput.disabled = false;
   formButton.disabled = false;
 };
