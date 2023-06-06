@@ -27,7 +27,27 @@ body {
   color: #eee;
   max-width: 768px;
   margin: 0 auto;
-  padding: 0 1rem
+  padding: 0 1rem;
+  position: relative;
+}
+
+nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  height: 4rem;
+  background-color: #454545;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+nav img {
+  width: 1.5rem;
 }
 
 section {
@@ -369,6 +389,10 @@ quote:nth-of-type(even){
   #chat-form button img {
     display:block;
     /* transform: scale(1.) */
+  }
+
+  nav {
+    display: flex;
   }
  
 }
