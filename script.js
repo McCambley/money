@@ -123,6 +123,7 @@ const chatForm = document.getElementById("chat-form");
 const chatHistory = document.getElementById("chat-history");
 
 const apiUrl = "https://chat-5notrvadta-uc.a.run.app";
+const apiUrlV2 = "https://chat-v2-5notrvadta-uc.a.run.app";
 
 const disableForm = () => {
   chatForm.style.setProperty("display", "none");
@@ -136,24 +137,34 @@ const enableForm = () => {
   formButton.disabled = false;
 };
 
+let messages = [
+  {
+    role: "system",
+    content:
+      "You are a financial expert. Target audience for this response is a high school student. You are not allowed to answer questions that do not pertain to personal finance in some manner. If you are asked a question that does not pertain to personal finance, politely explain that you are only designed to answer questions about personal finance. Provider answers in as few sentences as possible. Use appropriate analogies to explain complex topics. Answer questions in a concise, comprehensive, and approachable manner",
+  },
+  {
+    role: "assistant",
+    content: "Hey there! I'm a chatbot and an expert in all things personal finance. What can I help you with?",
+  },
+];
+
 async function sendMessage(message) {
   // Disable the form while the message is being sent
-  const prompt =
-    "You are a financial expert. Target audience for this response is a highschooler. You are not allowed to answer questions that do not pertain to personal finance in some manner. If you are asked a question that does not pertain to personal finance, politely explain that you are only designed to answer questions about personal finance. Answer the following question in a comprehensive and approachable manner: ";
-  const response = await fetch(apiUrl, {
+  messages = [...messages, { role: "user", content: message }];
+  const response = await fetch(apiUrlV2, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      // Authorization: `Bearer TOKEN`,
     },
     body: JSON.stringify({
-      prompt,
-      message,
+      messages: messages,
     }),
   });
 
   const data = await response.json();
   const generatedMessage = data.response;
+  messages = [...messages, { role: "assistant", content: generatedMessage }];
 
   // Display the generated message in the chat interface
   displayMessage(generatedMessage);
@@ -181,7 +192,8 @@ chatForm.addEventListener("submit", async (event) => {
     await sendMessage(message);
   } catch (error) {
     console.log(error);
-    chatOutput.textContent = "Something went wrong...";
+    enableForm();
+    displayMessage("Something went wrong...");
   }
   userInput.placeholder = "Ask another question...";
   enableForm();
