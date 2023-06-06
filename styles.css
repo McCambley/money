@@ -128,7 +128,7 @@ input[type="range"] {
 .image-container img {
   width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   max-width: 480px;
   margin-top: 1rem;
@@ -217,7 +217,7 @@ footer {
 .callout, .info {
   text-align: center;
   margin-top: 1rem;
-  border-radius: 5px;
+  border-radius: 12px;
   padding: 1rem
 }
 
@@ -227,7 +227,7 @@ footer {
 
 .chat-container {
   border: 1px solid rgb(117, 117, 117);
-  border-radius: 16px;
+  border-radius: 12px;
   padding: 1rem;
   background: rgba(117, 117, 117, .1);
 }
@@ -249,7 +249,7 @@ footer {
   border: 1px solid rgb(117, 117, 117);
   background-color: rgba(117, 117, 117, .1);
   padding: .5rem 1rem;
-  border-radius: 10px;
+  border-radius: 8px;
   max-width: 65%;
   align-self: flex-start;
 }
@@ -400,7 +400,7 @@ hr {
 section {
   padding: 1rem;
   background-color: #333;
-  border-radius: 8px;
+  border-radius: 16px;
   margin-bottom: 1rem
 }
 
