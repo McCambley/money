@@ -14,11 +14,13 @@
   }
 }
 
-* {
-  box-sizing: border-box;
+html {
+  scroll-behavior: smooth;
 }
 
+
 body {
+  box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
   /* set the background to dark */
   background-color: #333;
