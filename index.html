@@ -511,10 +511,27 @@
       <p><a href="https://jakemccambley.com/" target="_blank" rel="noopener noreferrer">Jake McCambley 2023</a></p>
     </footer>
     <nav class="nav">
-      <a href="#contents"><img src="./public/nav.svg" alt="Contents list" /></a>
-      <a href="#chatbot"><img src="./public/chat.svg" alt="Chat bubble" /></a>
       <a href="#calculator"><img src="./public/calc.svg" alt="Calculator" /></a>
+      <button id="modal-open" class="modal-open">
+        <img src="./public/up.svg" alt="Contents list" />
+      </button>
+      <a href="#chatbot"><img src="./public/chat.svg" alt="Chat bubble" /></a>
     </nav>
+    <modal id="modal">
+      <div class="modal-links">
+        <a href="#contents"><span>📚</span><span>Contents</span></a>
+        <a href="#definitions"><span>🔎</span><span>Glossary</span></a>
+        <a href="#guidelines"><span>🧭</span><span>Guidelines</span></a>
+        <a href="#calculator"><span>🧮</span><span>Calculator</span></a>
+        <a href="#quotes"><span>💁🏼‍♂️</span><span>Quotes</span></a>
+        <a href="#chatbot"><span>💬</span><span>Chatbot</span></a>
+        <a href="#links"><span>🔗</span><span>Links</span></a>
+        <a href="#to-do"><span>☑️</span><span>Next steps</span></a>
+      </div>
+      <button id="modal-close" class="modal-close">
+        <img src="./public/down.svg" alt="Close menu" />
+      </button>
+    </modal>
     <script src="script.js"></script>
   </body>
 </html>

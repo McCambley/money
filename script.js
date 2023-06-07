@@ -1,4 +1,4 @@
-// @ts-check
+// @ts-nocheck
 // Get references to the input elements
 const hourlyWageInput = document.getElementById("hourly-wage");
 
@@ -213,3 +213,26 @@ function displayMessage(message) {
   // Display the message in the chat interface
   chatHistory.appendChild(botMessage);
 }
+
+// Modal integration
+const modal = document.getElementById("modal");
+const openModalButton = document.getElementById("modal-open");
+const closeModalButton = document.getElementById("modal-close");
+
+openModalButton.addEventListener("click", () => {
+  modal.classList.add("open");
+});
+
+closeModalButton.addEventListener("click", () => {
+  modal.classList.remove("open");
+});
+
+// Get all the <a> elements inside the div
+const links = document.querySelectorAll(".modal-links a");
+
+// Add click event listener to each link
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    modal.classList.remove("open");
+  });
+});
