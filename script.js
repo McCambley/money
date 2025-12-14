@@ -122,8 +122,8 @@ const formButton = document.getElementById("form-button");
 const chatForm = document.getElementById("chat-form");
 const chatHistory = document.getElementById("chat-history");
 
-const apiUrl = "https://chat-5notrvadta-uc.a.run.app";
-const apiUrlV2 = "https://chat-v2-5notrvadta-uc.a.run.app";
+const apiUrl = "";
+const apiUrlV2 = "";
 
 const disableForm = () => {
   chatForm.style.setProperty("display", "none");
@@ -150,6 +150,7 @@ let messages = [
 ];
 
 async function sendMessage(message) {
+  return;
   // Disable the form while the message is being sent
   messages = [...messages, { role: "user", content: message }];
   const response = await fetch(apiUrlV2, {
@@ -171,6 +172,7 @@ async function sendMessage(message) {
 }
 
 chatForm.addEventListener("submit", async (event) => {
+  return;
   event.preventDefault();
   disableForm();
   // Display the user's message in the chat interface
@@ -200,6 +202,7 @@ chatForm.addEventListener("submit", async (event) => {
 });
 
 function displayMessage(message) {
+  return;
   // Create the response element
   const botMessage = document.createElement("p");
   botMessage.classList.add("chat-message", "bot");
